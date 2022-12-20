@@ -12,9 +12,7 @@
 
 Теперь создадим в корне проекта файл webpack.config.js и скопируем из документации Webpack простейший конфиг для dev-server'а:
 
-| code  |
-| ------------- | 
-| ```js
+```js
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -39,6 +37,21 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
 };
-``` | 
- 
+```
 
+И установим ещё парочку плагинов для его работоспособности. 
+
+npm i -D html-webpack-plugin clean-webpack-plugin
+
+Устанавливаем flickity через npm, для этого находим страницу библиотеки в поиске npm.
+
+И находим в разделе Install команду для установки:
+
+npm i flickity
+Обратите внимание, что флаг -D писать не надо, так как эта библиотека попадёт к пользователю, то есть она является обычной dependency.
+
+Устанавливаем style-loader и css-loader:
+
+npm install -D style-loader css-loader
+
+Добавляем импорт CSS в index.js:
