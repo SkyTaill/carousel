@@ -12,7 +12,9 @@
 
 Теперь создадим в корне проекта файл webpack.config.js и скопируем из документации Webpack простейший конфиг для dev-server'а:
 
-```js
+| code  |
+| ------------- | 
+| ```js
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -37,4 +39,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
 };
-```
+``` | 
+ 
+
